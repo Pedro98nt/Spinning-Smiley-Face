@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: -webkit-box;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background-color: #feee9d;
+}
+
+.head {
+  height: 50vmin;
+  width: 50vmin;
+  background: #fbd671;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding-top: 4vmin;
+}
+
+.face {
+  width: 55%;
+  height: 70%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.face__eyes {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.face__eyes--left, .face__eyes--right {
+  width: 5vmin;
+  height: 8vmin;
+  background-color: #20184e;
+  border-radius: 50%;
+  border: 1vmin solid #20184e;
+  position: relative;
+}
+.face__eyes--left::after, .face__eyes--right::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  top: 5%;
+  background-color: #fbd671;
+  border-radius: 50%;
+}
+.face__mouth {
+  bottom: 0;
+  background-color: #20184e;
+  border: 1vmin solid #20184e;
+  overflow: hidden;
+  position: relative;
+}
+.face__tongue {
+  position: absolute;
+  width: 75%;
+  height: 70%;
+  left: 20%;
+  top: 60%;
+  background-color: #f15962;
+  border-radius: 50%;
+}
